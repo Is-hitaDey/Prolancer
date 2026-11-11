@@ -1,8 +1,10 @@
 import { Router } from "express";
 
+import authRoutes from "../modules/auth/auth.routes.js";
+import userRoutes from "../modules/users/user.routes.js";
+
 const router = Router();
 
-// Health check
 router.get("/health", (req, res) => {
   res.status(200).json({
     success: true,
@@ -13,5 +15,9 @@ router.get("/health", (req, res) => {
     },
   });
 });
+
+router.use("/auth", authRoutes);
+
+router.use("/users", userRoutes);
 
 export default router;
