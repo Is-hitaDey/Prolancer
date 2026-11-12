@@ -5,6 +5,7 @@ import userRoutes from "../modules/users/user.routes.js";
 import internshipRoutes from "../modules/internships/internship.routes.js";
 import taskRoutes from "../modules/tasks/task.routes.js";
 import taskAssignmentRoutes from "../modules/taskAssignment/taskAssignment.routes.js";
+import submissionRoutes from "../modules/submissions/submission.routes.js";
 
 
 const router = Router();
@@ -29,5 +30,7 @@ router.use("/internships", internshipRoutes);
 router.use("/tasks", taskRoutes);
 
 router.use("/task-assignments", taskAssignmentRoutes);
+
+router.use("/submissions", submissionRoutes);
 
 export default router;
